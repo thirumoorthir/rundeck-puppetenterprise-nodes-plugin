@@ -113,15 +113,15 @@ public class Mapper implements Constants {
 
         // parse tags
         final boolean hasTags = mappings.containsKey("tags");
-		print("hasTags:",hasTags);
+		//system.out("hasTags:",hasTags);
         if (hasTags) {
             // TODO: for now, tags is every tag we found.
             result.getTags().addAll(puppetNode.getClasses());
-			print("1",result.getTags().addAll(puppetNode.getClasses()));
+			//system.out("1",result.getTags().addAll(puppetNode.getClasses()));
 
             // add default tag if any
             if (defaultNodeTag.isPresent()) {
-				print ("2",result.getTags().add(defaultNodeTag.get()));
+				//system.out ("2",result.getTags().add(defaultNodeTag.get()));
                 result.getTags().add(defaultNodeTag.get());
             }
 
